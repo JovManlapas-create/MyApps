@@ -1,0 +1,118 @@
+.container {
+  padding: 16px;
+}
+
+.product-card {
+  margin: 8px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--ion-color-light);
+  }
+}
+
+ion-card-header {
+  padding-bottom: 8px;
+}
+
+ion-card-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+}
+
+ion-card-subtitle {
+  font-size: 0.9em;
+  color: var(--ion-color-primary);
+  font-weight: 600;
+}
+
+ion-card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  p {
+    margin-bottom: 16px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--ion-color-medium);
+  }
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  
+  ion-button {
+    --border-radius: 20px;
+    font-weight: 600;
+  }
+}
+
+.price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--ion-color-success);
+  background: var(--ion-color-light);
+  padding: 4px 12px;
+  border-radius: 15px;
+}
+
+// Custom breakpoint adjustments
+@media (max-width: 576px) {
+  .container {
+    padding: 8px;
+  }
+  
+  .product-card {
+    margin: 4px 0;
+    
+    img {
+      height: 180px;
+    }
+  }
+  
+  .price-section {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    
+    ion-button {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+// Motorcycle theme enhancements
+ion-toolbar {
+  --background: linear-gradient(135deg, var(--ion-color-dark) 0%, var(--ion-color-medium) 100%);
+  --color: white;
+}
+
+ion-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
